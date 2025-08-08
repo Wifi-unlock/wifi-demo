@@ -3,29 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Wi-Fi Access</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Logo Banners</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Top Static Banner -->
+  <!-- Static Top Banner -->
   <div class="top-banner">
-    <img src="images/easy-life-kitchens-logo.png" alt="Easy Life Kitchens" />
+    <img src="easylife-logoA.png" alt="Easy Life Kitchens" />
   </div>
 
-  <!-- Center WiFi Password Box -->
-  <div class="wifi-box">
-    <h2>Wi-Fi Password</h2>
-    <p><strong>GolfDay2025!</strong></p>
+  <!-- Main Content Area -->
+  <div class="content">
+    <h1>WiFi Password</h1>
+    <p><strong>12345678</strong></p>
   </div>
 
-  <!-- Bottom Rotating Banner -->
+  <!-- Rotating Bottom Banner -->
   <div class="bottom-banner">
-    <div class="slide-track">
-      <img src="images/weya-logo.png" alt="Weya" />
-      <img src="images/easy-life-kitchens-logo.png" alt="Easy Life Kitchens" />
-    </div>
+    <img src="easylife-logoA.png" class="slide active" alt="Easy Life Kitchens" />
+    <img src="weya-logoB.png" class="slide" alt="Weya" />
   </div>
 
+  <script>
+    const slides = document.querySelectorAll('.bottom-banner .slide');
+    let current = 0;
+
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 3000); // 3 seconds
+  </script>
 </body>
 </html>
