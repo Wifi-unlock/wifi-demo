@@ -2,30 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>EasyLife WiFi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WiFi Password Page</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Top Banner -->
+  <!-- Top Banner with Easylife Logo -->
   <div class="top-banner">
-    <img src="images/easylife-logoA.png" alt="EasyLife Logo">
+    <img src="images/easylife-logoA.png" alt="Easylife Logo" />
   </div>
 
   <!-- WiFi Password Box -->
   <div class="wifi-box">
     <h2>WiFi Password:</h2>
-    <p>EasyLife2025!</p>
+    <p><strong>wifipassword123</strong></p>
   </div>
 
   <!-- Bottom Rotating Banner -->
   <div class="bottom-banner">
-    <img src="images/easylife-logoA.png" class="active" alt="EasyLife Logo">
-    <img src="images/weya-logoB.png" alt="Weya Logo">
+    <img src="images/easylife-logoA.png" alt="Easylife Logo" class="active" />
+    <img src="images/weya-logoB.png" alt="Weya Logo" />
   </div>
 
-  <!-- JavaScript for Rotating Images -->
   <script>
     const images = document.querySelectorAll(".bottom-banner img");
     let current = 0;
@@ -34,8 +33,7 @@
       images[current].classList.remove("active");
       current = (current + 1) % images.length;
       images[current].classList.add("active");
-    }, 3000); // Switch every 3 seconds
+    }, 3000);
   </script>
-
 </body>
 </html>
