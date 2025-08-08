@@ -3,37 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Logo Banners</title>
+  <title>EasyLife WiFi</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Static Top Banner -->
+  <!-- Top Banner -->
   <div class="top-banner">
-    <img src="easylife-logoA.png" alt="Easy Life Kitchens" />
+    <img src="images/easylife-logoA.png" alt="EasyLife Logo">
   </div>
 
-  <!-- Main Content Area -->
-  <div class="content">
-    <h1>WiFi Password</h1>
-    <p><strong>12345678</strong></p>
+  <!-- WiFi Password Box -->
+  <div class="wifi-box">
+    <h2>WiFi Password:</h2>
+    <p>EasyLife2025!</p>
   </div>
 
-  <!-- Rotating Bottom Banner -->
+  <!-- Bottom Rotating Banner -->
   <div class="bottom-banner">
-    <img src="easylife-logoA.png" class="slide active" alt="Easy Life Kitchens" />
-    <img src="weya-logoB.png" class="slide" alt="Weya" />
+    <img src="images/easylife-logoA.png" class="active" alt="EasyLife Logo">
+    <img src="images/weya-logoB.png" alt="Weya Logo">
   </div>
 
+  <!-- JavaScript for Rotating Images -->
   <script>
-    const slides = document.querySelectorAll('.bottom-banner .slide');
+    const images = document.querySelectorAll(".bottom-banner img");
     let current = 0;
 
     setInterval(() => {
-      slides[current].classList.remove('active');
-      current = (current + 1) % slides.length;
-      slides[current].classList.add('active');
-    }, 3000); // 3 seconds
+      images[current].classList.remove("active");
+      current = (current + 1) % images.length;
+      images[current].classList.add("active");
+    }, 3000); // Switch every 3 seconds
   </script>
+
 </body>
 </html>
