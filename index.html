@@ -2,38 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WiFi Password Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WiFi Perks</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Top Banner with Easylife Logo -->
+  <!-- Top Banner -->
   <div class="top-banner">
-    <img src="images/easylife-logoA.png" alt="Easylife Logo" />
+    <img src="images/easylife-logoA.png" alt="Easylife Logo">
   </div>
 
   <!-- WiFi Password Box -->
   <div class="wifi-box">
-    <h2>WiFi Password:</h2>
-    <p><strong>wifipassword123</strong></p>
+    <h2>WiFi Password</h2>
+    <p><strong>connect123</strong></p>
   </div>
 
   <!-- Bottom Rotating Banner -->
   <div class="bottom-banner">
-    <img src="images/easylife-logoA.png" alt="Easylife Logo" class="active" />
-    <img src="images/weya-logoB.png" alt="Weya Logo" />
+    <img src="images/easylife-logoA.png" alt="Easylife Logo" class="active">
+    <img src="images/weya-logoB.png" alt="Weya Logo">
   </div>
 
   <script>
-    const images = document.querySelectorAll(".bottom-banner img");
+    const images = document.querySelectorAll('.bottom-banner img');
     let current = 0;
 
     setInterval(() => {
-      images[current].classList.remove("active");
+      images[current].classList.remove('active');
       current = (current + 1) % images.length;
-      images[current].classList.add("active");
+      images[current].classList.add('active');
     }, 3000);
   </script>
+
 </body>
 </html>
