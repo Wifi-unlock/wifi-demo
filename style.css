@@ -1,67 +1,53 @@
-/* General Reset */
+/* Reset & General */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f7f7f7;
-  padding: 20px;
   text-align: center;
+  padding: 10px;
+  background-color: #f8f8f8;
 }
 
 /* Top Banner */
-.top-banner {
-  width: 100%;
-  max-width: 300px;
-  margin: 0 auto 30px;
-}
-
 .top-banner img {
   width: 100%;
+  max-width: 300px;
   height: auto;
+  margin: 0 auto 20px;
+  display: block;
 }
 
 /* WiFi Password Box */
 .wifi-box {
-  background-color: #fff;
+  background: white;
   border: 2px solid #ccc;
-  padding: 20px;
-  margin: 0 auto 30px;
+  padding: 15px;
+  margin: 20px auto;
+  width: 90%;
   max-width: 300px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  font-size: 1.2rem;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.wifi-box h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.wifi-box p {
-  font-size: 18px;
-  font-weight: bold;
-  color: #555;
-}
-
-/* Bottom Banner (Rotating Logos) */
+/* Bottom Rotating Banner */
 .bottom-banner {
   position: relative;
   width: 100%;
   max-width: 300px;
-  height: 150px;
+  height: auto;
   margin: 0 auto;
-  overflow: hidden;
 }
 
 .bottom-banner img {
   position: absolute;
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  height: auto;
+  max-height: 150px; /* Ensures it doesn't get too tall */
   top: 0;
   left: 0;
   opacity: 0;
@@ -70,21 +56,14 @@ body {
 
 .bottom-banner img.active {
   opacity: 1;
+  z-index: 1;
 }
 
-/* Responsive Design */
-@media (max-width: 480px) {
-  .top-banner,
-  .wifi-box,
-  .bottom-banner {
+/* Mobile Optimisation */
+@media (max-width: 600px) {
+  .top-banner img,
+  .bottom-banner img {
     max-width: 90%;
-  }
-
-  .wifi-box h2 {
-    font-size: 18px;
-  }
-
-  .wifi-box p {
-    font-size: 16px;
+    max-height: 120px;
   }
 }
