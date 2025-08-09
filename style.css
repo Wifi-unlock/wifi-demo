@@ -1,69 +1,49 @@
-/* Reset & General */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
+/* General page setup */
 body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  padding: 10px;
-  background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Top Banner */
-.top-banner img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  margin: 0 auto 20px;
-  display: block;
+/* Banner logos */
+.banner-logo {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
-/* WiFi Password Box */
+/* WiFi box styling */
 .wifi-box {
-  background: white;
-  border: 2px solid #ccc;
-  padding: 15px;
-  margin: 20px auto;
-  width: 90%;
-  max-width: 300px;
-  border-radius: 8px;
-  font-size: 1.2rem;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Bottom Rotating Banner */
-.bottom-banner {
-  position: relative;
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  margin: 0 auto;
-}
-
-.bottom-banner img {
-  position: absolute;
-  width: 100%;
-  height: auto;
-  max-height: 150px; /* Ensures it doesn't get too tall */
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-.bottom-banner img.active {
-  opacity: 1;
-  z-index: 1;
-}
-
-/* Mobile Optimisation */
-@media (max-width: 600px) {
-  .top-banner img,
-  .bottom-banner img {
+    border: 2px solid #333;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+    background-color: #f5f5f5;
+    border-radius: 10px;
     max-width: 90%;
-    max-height: 120px;
-  }
+}
+
+.password {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e63946;
+}
+
+/* Mobile responsive tweaks */
+@media (max-width: 600px) {
+    .banner-logo {
+        max-width: 80%; /* Reduce logo size for mobile */
+    }
+
+    .password {
+        font-size: 1.2rem;
+    }
+
+    .wifi-box {
+        padding: 15px;
+    }
 }
