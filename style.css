@@ -17,16 +17,27 @@ body {
 /* Header / top banner styling */
 header {
   background-color: #000000; /* black background */
-  padding: 20px 0;           /* vertical spacing */
+  padding: 0;
+  text-align: center;
+  /* optional: add some vertical padding if needed */
 }
 
 /* Banner logo styling */
 .banner-logo {
-  max-width: 250px; /* Set a fixed max width for better fit */
-  width: 100%;       /* Ensure it scales down on smaller screens */
-  height: auto;
+  width: 100%;          /* stretch full width */
+  height: auto;         /* maintain aspect ratio */
+  max-height: none;     /* remove previous limit to prevent cutting off */
   display: block;
-  margin: 20px auto; /* Added a little more vertical spacing */
+  margin: 0 auto;       /* center horizontally */
+  object-fit: contain;  /* ensure entire logo fits */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover effect for clickable logo */
+header a:hover .banner-logo {
+  transform: scale(1.02); /* slight zoom */
+  opacity: 0.9;
 }
 
 /* WiFi password box */
@@ -64,7 +75,6 @@ header {
     font-size: 1.6rem;
   }
   .banner-logo {
-    max-width: 180px; /* Scale down for small screens */
-    margin: 15px auto;
+    max-height: 100%; /* allow full logo to scale down naturally on mobile */
   }
 }
