@@ -5,14 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>WiFi Password Demo</title>
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5R4QHLT1W8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-5R4QHLT1W8');
+  </script>
 </head>
 <body>
 
   <!-- Top static banner -->
   <header>
-    <a href="https://treehouseclub.co.za/" target="_blank" class="banner-link">
+    <a href="http://bit.ly/41Vh2oU" target="_blank" class="banner-link" id="treehouse-banner">
       <img
-        src="https://raw.githubusercontent.com/marvsa-7/wifi-demo/refs/heads/main/treehouse-logo.jpg"
+        src="https://raw.githubusercontent.com/marvsa-7/wifi-demo/main/treehouse-logo.jpg"
         alt="Treehouse Logo"
         class="banner-logo"
       />
@@ -38,6 +48,14 @@
   </footer>
 
   <script>
+    // Track Treehouse banner clicks as custom GA4 event
+    document.getElementById("treehouse-banner").addEventListener("click", function () {
+      gtag("event", "banner_click", {
+        event_category: "engagement",
+        event_label: "Treehouse Banner",
+      });
+    });
+
     // Rotate between EasyLife and Weya logos every 3 seconds
     const images = [
       "https://raw.githubusercontent.com/marvsa-7/wifi-demo/main/weya-logoB.png",
