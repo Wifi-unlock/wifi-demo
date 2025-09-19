@@ -32,15 +32,14 @@
   <!-- WiFi password box -->
   <main>
     <div class="wifi-box">
-      <h2>WiFi Password</h2>
-      <p class="password">Free4U2025!</p>
+      <h2>WiFi NAME: Joons 2.4G</h2>
+      <p class="password">Password:J00ns_58</p>
     </div>
   </main>
 
-  <!-- Bottom rotating banner -->
+  <!-- Bottom static banner -->
   <footer>
     <img
-      id="rotating-banner"
       src="https://raw.githubusercontent.com/marvsa-7/wifi-demo/main/weya-logoB.png"
       alt="WEYA Logo"
       class="banner-logo"
@@ -55,19 +54,6 @@
         event_label: "Treehouse Banner",
       });
     });
-
-    // Rotate between EasyLife and Weya logos every 3 seconds
-    const images = [
-      "https://raw.githubusercontent.com/marvsa-7/wifi-demo/main/weya-logoB.png",
-      "https://raw.githubusercontent.com/marvsa-7/wifi-demo/main/easylife-logoA.png",
-    ];
-    let current = 0;
-    const rotatingBanner = document.getElementById("rotating-banner");
-
-    setInterval(() => {
-      current = (current + 1) % images.length;
-      rotatingBanner.src = images[current];
-    }, 3000);
   </script>
 </body>
 </html>
